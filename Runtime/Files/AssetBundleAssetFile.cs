@@ -7,13 +7,14 @@ using System.Threading;
 using System.Threading.Tasks;
 using Depra.Asset.Delegates;
 using Depra.Asset.Exceptions;
-using Depra.Asset.Files.Bundles.Exceptions;
-using Depra.Asset.Files.Bundles.Extensions;
+using Depra.Asset.Bundle.Exceptions;
+using Depra.Asset.Bundle.Extensions;
+using Depra.Asset.Files;
 using Depra.Asset.ValueObjects;
 using UnityEngine;
 using Object = UnityEngine.Object;
 
-namespace Depra.Asset.Files.Bundles
+namespace Depra.Asset.Bundle
 {
 	public sealed class AssetBundleAssetFile<TAsset> : IAssetFile<TAsset>, IDisposable where TAsset : Object
 	{
@@ -41,7 +42,7 @@ namespace Depra.Asset.Files.Bundles
 			}
 
 			var loadedAsset = _assetBundle.LoadAsset<TAsset>(Name);
-			Guard.AgainstNull(loadedAsset, () => new AssetBundleFileNotLoaded(Name, _assetBundle.name));
+			Guard.AgainstNull(loadedAsset, () => new AssetBundleFileLoadingFailed(Name, _assetBundle.name));
 
 			_loadedAsset = loadedAsset;
 			Metadata.Size = UnityFileSize.FromProfiler(_loadedAsset);
@@ -70,7 +71,7 @@ namespace Depra.Asset.Files.Bundles
 				.LoadAssetAsync<TAsset>(Name)
 				.ToTask(OnProgress, cancellationToken);
 
-			Guard.AgainstNull(loadedAsset, () => new AssetBundleFileNotLoaded(Name, _assetBundle.name));
+			Guard.AgainstNull(loadedAsset, () => new AssetBundleFileLoadingFailed(Name, _assetBundle.name));
 
 			_loadedAsset = (TAsset) loadedAsset;
 			onProgress?.Invoke(DownloadProgress.Full);

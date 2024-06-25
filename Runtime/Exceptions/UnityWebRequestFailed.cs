@@ -4,7 +4,7 @@
 using System;
 using UnityEngine.Networking;
 
-namespace Depra.Asset.Files.Bundles.Exceptions
+namespace Depra.Asset.Bundle.Exceptions
 {
 	internal sealed class UnityWebRequestFailed : Exception
 	{

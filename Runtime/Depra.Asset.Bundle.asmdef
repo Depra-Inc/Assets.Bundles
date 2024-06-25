@@ -1,6 +1,6 @@
 {
-    "name": "Depra.Asset.Bundles",
-    "rootNamespace": "Depra.Asset.Bundles",
+    "name": "Depra.Asset.Bundle",
+    "rootNamespace": "Depra.Asset.Bundle",
     "references": [
         "GUID:ce2ab5ef472b35f498b9d47a89be9396"
     ],

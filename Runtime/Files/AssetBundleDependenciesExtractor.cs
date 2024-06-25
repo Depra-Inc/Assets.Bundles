@@ -3,11 +3,11 @@
 
 using System.Collections.Generic;
 using System.Runtime.CompilerServices;
-using Depra.Asset.Files.Bundles.Exceptions;
+using Depra.Asset.Bundle.Exceptions;
 using Depra.Asset.ValueObjects;
 using UnityEngine;
 
-namespace Depra.Asset.Files.Bundles
+namespace Depra.Asset.Bundle
 {
 	internal static class AssetBundleDependenciesExtractor
 	{
@@ -18,7 +18,7 @@ namespace Depra.Asset.Files.Bundles
 			var manifest = assetBundle.LoadAsset<AssetBundleManifest>(MANIFEST_NAME);
 			if (manifest == null)
 			{
-				throw new AssetBundleFileNotLoaded(MANIFEST_NAME, assetBundle.name);
+				throw new AssetBundleFileLoadingFailed(MANIFEST_NAME, assetBundle.name);
 			}
 
 			var dependencies = manifest.GetAllDependencies(assetBundle.name);

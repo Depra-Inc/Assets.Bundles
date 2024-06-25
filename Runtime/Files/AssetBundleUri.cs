@@ -5,7 +5,7 @@ using System.IO;
 //using Depra.Assets.Extensions;
 using Depra.Asset.ValueObjects;
 
-namespace Depra.Asset.Files.Bundles
+namespace Depra.Asset.Bundle
 {
 	public sealed record AssetBundleUri : IAssetUri
 	{

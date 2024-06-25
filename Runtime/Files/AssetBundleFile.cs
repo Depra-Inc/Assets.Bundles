@@ -7,12 +7,13 @@ using System.Threading;
 using System.Threading.Tasks;
 using Depra.Asset.Delegates;
 using Depra.Asset.Exceptions;
-using Depra.Asset.Files.Bundles.Exceptions;
-using Depra.Asset.Files.Bundles.Sources;
+using Depra.Asset.Bundle.Exceptions;
+using Depra.Asset.Bundle.Sources;
+using Depra.Asset.Files;
 using Depra.Asset.ValueObjects;
 using UnityEngine;
 
-namespace Depra.Asset.Files.Bundles
+namespace Depra.Asset.Bundle
 {
 	public sealed class AssetBundleFile : IAssetFile<AssetBundle>, IDisposable
 	{
@@ -41,7 +42,7 @@ namespace Depra.Asset.Files.Bundles
 			}
 
 			var loadedAssetBundle = _source.Load(by: _uri.AbsolutePathWithoutExtension);
-			Guard.AgainstNull(loadedAssetBundle, () => new AssetBundleNotLoaded(_uri.Absolute));
+			Guard.AgainstNull(loadedAssetBundle, () => new AssetBundleLoadingFailed(_uri.Absolute));
 
 			_loadedAssetBundle = loadedAssetBundle;
 			Metadata.Size = _source.Size(of: _loadedAssetBundle);
@@ -61,7 +62,7 @@ namespace Depra.Asset.Files.Bundles
 			var loadedAssetBundle = await _source
 				.LoadAsync(_uri.AbsolutePathWithoutExtension, OnProgress, cancellationToken);
 
-			Guard.AgainstNull(loadedAssetBundle, () => new AssetBundleNotLoaded(_uri.Absolute));
+			Guard.AgainstNull(loadedAssetBundle, () => new AssetBundleLoadingFailed(_uri.Absolute));
 
 			_loadedAssetBundle = loadedAssetBundle;
 			onProgress?.Invoke(DownloadProgress.Full);
@@ -96,7 +97,7 @@ namespace Depra.Asset.Files.Bundles
 
 		public IEnumerable<IAssetUri> Dependencies()
 		{
-			Guard.Against(IsLoaded == false, () => new AssetBundleNotLoaded(_uri.Absolute));
+			Guard.Against(IsLoaded == false, () => new AssetBundleLoadingFailed(_uri.Absolute));
 			return AssetBundleDependenciesExtractor.Extract(_loadedAssetBundle);
 		}
 

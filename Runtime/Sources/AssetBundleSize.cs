@@ -9,7 +9,7 @@ using Depra.Asset.ValueObjects;
 using UnityEngine;
 using Object = UnityEngine.Object;
 
-namespace Depra.Asset.Files.Bundles.Sources
+namespace Depra.Asset.Bundle.Sources
 {
 	public static class AssetBundleSize
 	{

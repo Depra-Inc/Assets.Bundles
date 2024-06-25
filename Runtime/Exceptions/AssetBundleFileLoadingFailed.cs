@@ -3,11 +3,11 @@
 
 using System;
 
-namespace Depra.Asset.Files.Bundles.Exceptions
+namespace Depra.Asset.Bundle.Exceptions
 {
-	internal sealed class AssetBundleFileNotLoaded : Exception
+	internal sealed class AssetBundleFileLoadingFailed : Exception
 	{
-		public AssetBundleFileNotLoaded(string name, string bundleName) : base(
+		public AssetBundleFileLoadingFailed(string name, string bundleName) : base(
 			$"File with name '{name}' form asset bundle '{bundleName}' was not loaded!") { }
 	}
 }
