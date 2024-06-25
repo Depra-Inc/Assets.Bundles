@@ -1,7 +1,7 @@
 {
-  "name": "com.depra.asset.bundles.unity",
+  "name": "com.depra.asset.bundle",
   "version": "0.0.1",
-  "displayName": "Depra.Asset.Bundles",
+  "displayName": "Depra.Asset.Bundle",
   "description": "Provides an API for loading Unity asset files in multiple ways through a single interface.",
   "unity": "2021.3",
   "license": "Apache-2.0",
