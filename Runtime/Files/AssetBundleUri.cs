@@ -3,9 +3,9 @@
 
 using System.IO;
 //using Depra.Assets.Extensions;
-using Depra.Asset.ValueObjects;
+using Depra.Assets.ValueObjects;
 
-namespace Depra.Asset.Bundle
+namespace Depra.Assets.Bundle
 {
 	public sealed record AssetBundleUri : IAssetUri
 	{

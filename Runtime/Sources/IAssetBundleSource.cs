@@ -4,10 +4,10 @@
 using System;
 using System.Threading;
 using System.Threading.Tasks;
-using Depra.Asset.ValueObjects;
+using Depra.Assets.ValueObjects;
 using UnityEngine;
 
-namespace Depra.Asset.Bundle.Sources
+namespace Depra.Assets.Bundle.Sources
 {
 	public interface IAssetBundleSource
 	{

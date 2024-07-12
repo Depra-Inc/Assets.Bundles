@@ -3,7 +3,7 @@
 
 using System;
 
-namespace Depra.Asset.Bundle.Exceptions
+namespace Depra.Assets.Bundle.Exceptions
 {
 	internal sealed class AssetBundleLoadingFailed : Exception
 	{

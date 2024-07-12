@@ -3,11 +3,11 @@
 
 using System.Collections.Generic;
 using System.Runtime.CompilerServices;
-using Depra.Asset.Bundle.Exceptions;
-using Depra.Asset.ValueObjects;
+using Depra.Assets.ValueObjects;
+using Depra.Assets.Bundle.Exceptions;
 using UnityEngine;
 
-namespace Depra.Asset.Bundle
+namespace Depra.Assets.Bundle
 {
 	internal static class AssetBundleDependenciesExtractor
 	{

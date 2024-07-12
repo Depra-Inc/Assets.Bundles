@@ -5,16 +5,16 @@ using System;
 using System.Collections.Generic;
 using System.Threading;
 using System.Threading.Tasks;
-using Depra.Asset.Delegates;
-using Depra.Asset.Exceptions;
-using Depra.Asset.Bundle.Exceptions;
-using Depra.Asset.Bundle.Extensions;
-using Depra.Asset.Files;
-using Depra.Asset.ValueObjects;
+using Depra.Assets.Delegates;
+using Depra.Assets.Bundle.Extensions;
+using Depra.Assets.ValueObjects;
+using Depra.Assets.Bundle.Exceptions;
+using Depra.Assets.Exceptions;
+using Depra.Assets.Files;
 using UnityEngine;
 using Object = UnityEngine.Object;
 
-namespace Depra.Asset.Bundle
+namespace Depra.Assets.Bundle
 {
 	public sealed class AssetBundleAssetFile<TAsset> : IAssetFile<TAsset>, IDisposable where TAsset : Object
 	{

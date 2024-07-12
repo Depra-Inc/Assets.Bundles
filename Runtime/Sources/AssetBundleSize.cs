@@ -5,11 +5,11 @@ using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
-using Depra.Asset.ValueObjects;
+using Depra.Assets.ValueObjects;
 using UnityEngine;
 using Object = UnityEngine.Object;
 
-namespace Depra.Asset.Bundle.Sources
+namespace Depra.Assets.Bundle.Sources
 {
 	public static class AssetBundleSize
 	{

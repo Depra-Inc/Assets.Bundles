@@ -1,6 +1,6 @@
 {
-    "name": "Depra.Asset.Bundle",
-    "rootNamespace": "Depra.Asset.Bundle",
+    "name": "Depra.Assets.Bundle",
+    "rootNamespace": "Depra.Assets.Bundle",
     "references": [
         "GUID:ce2ab5ef472b35f498b9d47a89be9396"
     ],
@@ -9,7 +9,7 @@
     "allowUnsafeCode": false,
     "overrideReferences": true,
     "precompiledReferences": [
-        "Depra.Asset.dll"
+        "Depra.Assets.dll"
     ],
     "autoReferenced": true,
     "defineConstraints": [],

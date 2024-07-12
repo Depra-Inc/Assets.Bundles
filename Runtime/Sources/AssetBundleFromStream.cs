@@ -5,12 +5,12 @@ using System;
 using System.IO;
 using System.Threading;
 using System.Threading.Tasks;
-using Depra.Asset.Bundle.Extensions;
-using Depra.Asset.Exceptions;
-using Depra.Asset.ValueObjects;
+using Depra.Assets.Bundle.Extensions;
+using Depra.Assets.ValueObjects;
+using Depra.Assets.Exceptions;
 using UnityEngine;
 
-namespace Depra.Asset.Bundle.Sources
+namespace Depra.Assets.Bundle.Sources
 {
 	public readonly struct AssetBundleFromStream : IAssetBundleSource
 	{

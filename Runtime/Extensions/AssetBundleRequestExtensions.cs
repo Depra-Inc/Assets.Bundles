@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 using UnityEngine;
 using Object = UnityEngine.Object;
 
-namespace Depra.Asset.Bundle.Extensions
+namespace Depra.Assets.Bundle.Extensions
 {
 	internal static class AssetBundleRequestExtensions
 	{
