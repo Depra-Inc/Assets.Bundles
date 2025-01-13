@@ -4,7 +4,6 @@
 using System;
 using System.Threading;
 using System.Threading.Tasks;
-using Depra.Assets.Exceptions;
 using UnityEngine;
 
 namespace Depra.Assets.Bundle
