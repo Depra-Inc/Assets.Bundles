@@ -1,16 +1,11 @@
 ﻿// SPDX-License-Identifier: Apache-2.0
-// © 2023-2024 Nikolay Melnikov <n.melnikov@depra.org>
+// © 2023-2025 Nikolay Melnikov <n.melnikov@depra.org>
 
 using System;
 using System.Collections.Generic;
 using System.Threading;
-using System.Threading.Tasks;
-using Depra.Assets.Delegates;
-using Depra.Assets.Files;
-using Depra.Assets.ValueObjects;
-using Depra.Assets.Bundle.Exceptions;
-using Depra.Assets.Bundle.Sources;
 using Depra.Assets.Exceptions;
+using Depra.Threading;
 using UnityEngine;
 
 namespace Depra.Assets.Bundle
@@ -50,7 +45,7 @@ namespace Depra.Assets.Bundle
 			return _loadedAssetBundle;
 		}
 
-		public async Task<AssetBundle> LoadAsync(DownloadProgressDelegate onProgress = null,
+		public async ITask<AssetBundle> LoadAsync(DownloadProgressDelegate onProgress = null,
 			CancellationToken cancellationToken = default)
 		{
 			if (IsLoaded)

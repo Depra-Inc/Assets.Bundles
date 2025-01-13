@@ -1,10 +1,8 @@
 ﻿// SPDX-License-Identifier: Apache-2.0
-// © 2023-2024 Nikolay Melnikov <n.melnikov@depra.org>
+// © 2023-2025 Nikolay Melnikov <n.melnikov@depra.org>
 
 using System.Collections.Generic;
 using System.Runtime.CompilerServices;
-using Depra.Assets.ValueObjects;
-using Depra.Assets.Bundle.Exceptions;
 using UnityEngine;
 
 namespace Depra.Assets.Bundle

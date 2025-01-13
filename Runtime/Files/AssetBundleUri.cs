@@ -1,9 +1,7 @@
 ﻿// SPDX-License-Identifier: Apache-2.0
-// © 2023-2024 Nikolay Melnikov <n.melnikov@depra.org>
+// © 2023-2025 Nikolay Melnikov <n.melnikov@depra.org>
 
 using System.IO;
-//using Depra.Assets.Extensions;
-using Depra.Assets.ValueObjects;
 
 namespace Depra.Assets.Bundle
 {
@@ -20,8 +18,6 @@ namespace Depra.Assets.Bundle
 		public AssetBundleUri(string path)
 		{
 			_fileInfo = new FileInfo(path);
-			//_fileInfo.Directory.Require();
-
 			Name = string.IsNullOrEmpty(Extension)
 				? _fileInfo.Name
 				: _fileInfo.Name.Replace(Extension, string.Empty);

@@ -1,5 +1,5 @@
 ﻿// SPDX-License-Identifier: Apache-2.0
-// © 2023-2024 Nikolay Melnikov <n.melnikov@depra.org>
+// © 2023-2025 Nikolay Melnikov <n.melnikov@depra.org>
 
 using System;
 using System.Threading;
@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 using UnityEngine;
 using Object = UnityEngine.Object;
 
-namespace Depra.Assets.Bundle.Extensions
+namespace Depra.Assets.Bundle
 {
 	internal static class AssetBundleRequestExtensions
 	{
@@ -18,7 +18,7 @@ namespace Depra.Assets.Bundle.Extensions
 				? Task.FromResult(self.asset)
 				: AwaitWithProgress(self, onProgress, cancellationToken);
 
-		private async static Task<Object> AwaitWithProgress(this AssetBundleRequest self,
+		private static async Task<Object> AwaitWithProgress(this AssetBundleRequest self,
 			Action<float> onProgress, CancellationToken cancellationToken = default)
 		{
 			while (self.isDone == false)

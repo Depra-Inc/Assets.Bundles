@@ -1,13 +1,12 @@
 ﻿// SPDX-License-Identifier: Apache-2.0
-// © 2023-2024 Nikolay Melnikov <n.melnikov@depra.org>
+// © 2023-2025 Nikolay Melnikov <n.melnikov@depra.org>
 
 using System;
 using System.Threading;
 using System.Threading.Tasks;
-using Depra.Assets.Bundle.Exceptions;
 using UnityEngine.Networking;
 
-namespace Depra.Assets.Bundle.Extensions
+namespace Depra.Assets.Bundle
 {
 	internal static class UnityWebRequestAsyncOperationExtensions
 	{
@@ -29,7 +28,7 @@ namespace Depra.Assets.Bundle.Extensions
 			return AwaitWithProgress(self, onProgress, cancellationToken);
 		}
 
-		private async static Task<UnityWebRequest> AwaitWithProgress(this UnityWebRequestAsyncOperation self,
+		private static async Task<UnityWebRequest> AwaitWithProgress(this UnityWebRequestAsyncOperation self,
 			Action<float> onProgress, CancellationToken cancellationToken = default)
 		{
 			while (self.isDone == false)

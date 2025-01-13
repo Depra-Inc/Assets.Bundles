@@ -1,22 +1,25 @@
 {
-  "name": "com.depra.assets.bundle",
-  "version": "0.0.3",
-  "displayName": "Depra.Assets.Bundle",
-  "description": "Provides an API for loading Unity asset files in multiple ways through a single interface.",
-  "unity": "2021.3",
-  "license": "Apache-2.0",
-  "keywords": [
-    "unity",
-    "assets",
-    "assetBundle"
-  ],
-  "author": {
-    "name": "Depra, Inc.",
-    "email": "n.melnikov@depra.org",
-    "url": "https://github.com/Depra-Inc"
-  },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/Depra-Inc/Assets.Bundle.git"
-  }
+	"name": "com.depra.assets.bundle",
+	"version": "0.0.4",
+	"displayName": "Depra.Assets.Bundle",
+	"description": "Provides an API for loading Unity asset files in multiple ways through a single interface.",
+	"unity": "2021.3",
+	"license": "Apache-2.0",
+	"dependencies": {
+		"com.depra.assets.unity": "0.2.10"
+	},
+	"keywords": [
+		"unity",
+		"assets",
+		"assetBundle"
+	],
+	"author": {
+		"name": "Depra, Inc.",
+		"email": "n.melnikov@depra.org",
+		"url": "https://github.com/Depra-Inc"
+	},
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/Depra-Inc/Assets.Bundle.git"
+	}
 }

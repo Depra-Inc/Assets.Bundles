@@ -1,15 +1,13 @@
 ﻿// SPDX-License-Identifier: Apache-2.0
-// © 2023-2024 Nikolay Melnikov <n.melnikov@depra.org>
+// © 2023-2025 Nikolay Melnikov <n.melnikov@depra.org>
 
 using System;
 using System.Threading;
 using System.Threading.Tasks;
-using Depra.Assets.Bundle.Extensions;
-using Depra.Assets.ValueObjects;
 using Depra.Assets.Exceptions;
 using UnityEngine;
 
-namespace Depra.Assets.Bundle.Sources
+namespace Depra.Assets.Bundle
 {
 	public readonly struct AssetBundleFromFile : IAssetBundleSource
 	{
